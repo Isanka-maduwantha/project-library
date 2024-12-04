@@ -53,13 +53,16 @@ function displayBook(array){
 
 }
 displayBook(myLibrary);
-
+const form = document.querySelector("form");
 const addButton = document.querySelector('.addButton');
 addButton.addEventListener("click",()=>{
-    const form = document.querySelector("form");
-    form.style ="display:flex"
+   
+    form.style ="display:flex";
 })
-
+const exitButton = document.querySelector('.exitButton');
+exitButton.addEventListener("click",()=>{
+    form.style ="display:none"
+})
 
 function prevent(event){
     event.preventDefault();
