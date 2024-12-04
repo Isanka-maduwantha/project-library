@@ -50,3 +50,4 @@ function displayBook(array){
     }
 
 }
+displayBook(myLibrary);
