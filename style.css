@@ -138,7 +138,15 @@ form{
         outline: none;
         
     }
-    
+    .Submit{
+        background-color: var(--main-color);
+        color: #fff;
+        border: 0;
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin: 10px;
+        margin-top: 20px;
+    }
  
 
 }
