@@ -54,27 +54,11 @@ function displayBook(array){
 }
 displayBook(myLibrary);
 
-function createForm(){
-    const form = document.createElement("form");
-    const ul = document.createElement("ul");
-    const select = document.createElement("select");
-    const submitButton = document.createElement("button")
-    ul.innerHTML =`<li><label for="name">Book Title<label><input type="text" name="title" id="tit;e"></li>
-    <li><label for="author">Author<label><input type="text" id="author" name="author"></li>
-    <li><label for="pages">Pages<label><input type="tel" id="pages" name="pages"></li> `;
-    select.innerHTML = `<option value="completed">Completed</option>
-    <option value="Notyet">Not Yet</option>
-    <option value="Reading">Reading</option>`;
-    submitButton.innerHTML="Submit"
-    submitButton.classList.add("Submit");
-    form.appendChild(ul);
-    form.appendChild(select);
-    form.appendChild(submitButton)
-    body.appendChild(form);
-    
-    
+
+
+
+function prevent(event){
+    event.preventDefault();
 }
-const addButton = document.querySelector(".addButton");
-addButton.addEventListener("click",()=>{
-    createForm();
-})
+const submitButton = document.querySelector(".submit");
+submitButton.addEventListener("click",prevent)
