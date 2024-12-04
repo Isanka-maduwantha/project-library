@@ -1,6 +1,7 @@
 *{
     --main-color:rgb(120, 19, 187);
     --main-color-dark: rgb(47, 2, 59);
+    --main-color-light:rgb(205, 175, 225);;
     
 }
 body{
@@ -8,6 +9,9 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .library{
     display: grid;
@@ -71,4 +75,70 @@ p{
 }
 .addButton:active{
     box-shadow: inset 1px 1px 30px #0009;
+}
+form{
+    position: absolute;
+    /* z-index: 2; */
+    top: 10px;
+    
+    width: 80%;
+    height: 90%;
+    background-color: #eee;
+    box-shadow: 1px 1px 20px #000;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul{
+        width: 80%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        li{
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            label{
+               color: var(--main-color-dark);
+            }
+        }
+    }
+
+    input{
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 0;
+        margin-top: 2px;
+        background-color: var(--main-color-light);
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1.4px;
+
+    }
+
+    select{
+        width: 80%;
+        border: none;
+        appearance: none;
+        background-color: var(--main-color-light);
+        padding: 10px;
+        border-radius: 15px;
+       
+    }
+    input:focus{
+        outline: none;
+        
+    }
+    
+ 
+
 }
