@@ -1,0 +1,31 @@
+
+.library{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    padding: 20px;
+    border-radius: 20px;
+    background-color: wheat;
+    gap: 20px;
+
+}
+.book{
+    background-color: #eee;
+    padding: 0 20px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 2px #0005;
+    line-height: 1.5;
+}
+h1{
+    
+    text-align: center;
+}
+p{
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+
+    span{
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        letter-spacing: 1.2px;
+    }
+}

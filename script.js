@@ -39,7 +39,8 @@ function addBookToLibrary(name,author,pages,status) {
 const library = document.getElementById("library");
 function createBookCard(Title="Title",author="Author",Pages="Pages",Status="status"){
     let book = document.createElement('div');
-    book.innerHTML = `<h1 class="title">${Title}</h1><p class="author">Author: ${author}</p><p class="pages">Pages: ${Pages}</p><p class="status">Status: ${Status}</p>`;
+    book.classList.add("book")
+    book.innerHTML = `<h1 class="title">${Title}</h1><p class="author"><span>Author:</span> ${author}</p><p class="pages"><span>Pages:</span> ${Pages}</p><p class="status"><span>Status:</span> ${Status}</p>`;
     library.appendChild(book);
 }
 // function to loop array 
