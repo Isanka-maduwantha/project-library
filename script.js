@@ -1,3 +1,5 @@
+const library = document.getElementById("library");
+const body = document.querySelector("body");
 const myLibrary = [
     {
         book:"Wheel",
@@ -36,7 +38,6 @@ function addBookToLibrary(name,author,pages,status) {
 
 }
 // Function for creating Element and add array items
-const library = document.getElementById("library");
 function createBookCard(Title="Title",author="Author",Pages="Pages",Status="status"){
     let book = document.createElement('div');
     book.classList.add("book")
@@ -53,7 +54,24 @@ function displayBook(array){
 }
 displayBook(myLibrary);
 
+function createForm(){
+    const form = document.createElement("form");
+    const ul = document.createElement("ul");
+    const select = document.createElement("select");
+
+    ul.innerHTML =`<li><label for="name">Book Title<label><input type="text" name="title" id="tit;e"></li>
+    <li><label for="author">Author<label><input type="text" id="author" name="author"></li>
+    <li><label for="pages">Pages<label><input type="tel" id="pages" name="pages"></li>1 `;
+    select.innerHTML = `<option value="completed">Completed</option>
+    <option value="Notyet">Not Yet</option>
+    <option value="Reading">Reading</option>`;
+    form.appendChild(ul);
+    form.appendChild(select);
+    body.appendChild(form);
+    
+    
+}
 const addButton = document.querySelector(".addButton");
 addButton.addEventListener("click",()=>{
-    
+    createForm();
 })
