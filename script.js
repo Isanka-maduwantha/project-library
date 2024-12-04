@@ -52,3 +52,8 @@ function displayBook(array){
 
 }
 displayBook(myLibrary);
+
+const addButton = document.querySelector(".addButton");
+addButton.addEventListener("click",()=>{
+    
+})
