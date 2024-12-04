@@ -55,17 +55,23 @@ function displayBook(array){
 displayBook(myLibrary);
 const form = document.querySelector("form");
 const addButton = document.querySelector('.addButton');
+// function to change the dispay of a element
+function ElementDisplayChange(element,value){
+    element.style =`display:${value}`;
+}
 addButton.addEventListener("click",()=>{
-   
-    form.style ="display:flex";
+   ElementDisplayChange(form,'flex');
+   ElementDisplayChange(addButton,"none")
+
+    
 })
 const exitButton = document.querySelector('.exitButton');
 exitButton.addEventListener("click",()=>{
-    form.style ="display:none"
+   ElementDisplayChange(form,'none');
+   ElementDisplayChange(addButton,"flex")
 })
 
-function prevent(event){
-    event.preventDefault();
-}
 const submitButton = document.querySelector(".submit");
-submitButton.addEventListener("click",prevent)
+submitButton.addEventListener("click",(event)=>{
+    event.preventDefault()
+})
